@@ -1,27 +1,60 @@
-# goit-js-hw-03
+# goit-js-hw-04
 
-                          js 3 homework
+                          js 4 homework
+                 Задача 1. Пакування товарів
 
-           Задача 1. Генератор slug  Task 1. Slug Generator
+Напиши функцію isEnoughCapacity(products, containerSize), яка обчислює, чи
+помістяться всі товари в контейнер при пакуванні. /_Write a function
+isEnoughCapacity(products, containerSize) that calculates whether all the
+products will fit in the container when packed. The function declares two
+parameters: products — an object in which the keys contain the names of the
+products, and their values ​​— the number of these products. For example, {
+apples: 2, grapes: 4 }. containerSize — a number, the maximum number of units of
+products that the container can hold. The function should return the result of
+checking whether all the products will fit in the container. That is, count the
+total number of products in the products object and return true if it is less
+than or equal to containerSize, and false if not._/
 
-Перш, ніж розв’язувати задачу, давай визначимося із новим терміном! Термін slug
-— це зрозумілий людині унікальний ідентифікатор, який використовується у веб
-розробці для створення читабельних URL-адрес. Наприклад, замість того, щоб
-користувач побачив в адресному рядку mysite.com/posts/1q8fh74tx, можна зробити
-slug із назви статті. У результаті адреса буде приємнішою для сприйняття:
-mysite.com/posts/arrays-for-beginners. Slug — це завжди рядок у нижньому
-регістрі, слова якого розділені тире.
+                 Задача 2. Розрахунок калорій Task 2. Calculating calories
 
-Before solving the task, let's define a new term! The term slug is a
-human-readable unique identifier that is used in web development to create
-readable URLs. For example, instead of the user seeing
-mysite.com/posts/1q8fh74tx in the address bar, you can make a slug from the
-title of the article. As a result, the address will be more pleasant to
-perceive: mysite.com/posts/arrays-for-beginners. A slug is always a lowercase
-string, the words of which are separated by dashes.
+Напиши функцію calcAverageCalories(days), яка повертає середньодобове значення
+кількості калорій, які спортсмен споживав протягом тижня. Функція очікує один
+параметр: days — масив об’єктів. Кожен об’єкт описує день тижня та кількість
+калорій calories, спожитих спортсменом, у цей день. Візьми код нижче і встав
+після оголошення своєї функції для перевірки коректності її роботи. У консоль
+будуть виведені результати її викликів. Write a function
+calcAverageCalories(days), which returns the average daily value of the number
+of calories that the athlete consumed during the week. The function expects one
+parameter: days — an array of objects. Each object describes the day of the week
+and the number of calories calories consumed by the athlete on that day. Take
+the code below and insert it after the declaration of your function to check
+that it works correctly. The results of its calls will be displayed in the
+console
 
-           Задача 2. Композиція масивів Task 2. Array composition Task
+                 Задача 3. Профіль гравця Task 3. Player profile
 
-           Задача 3. Фільтрація масиву чисел Task 3. Filtering an array of numbers
+Об’єкт profile описує профіль користувача на ігровій платформі. У його
+властивостях зберігається ім’я профілю username та кількість активних годин
+playTime, проведених у грі. const profile = { username: "Jacob", playTime: 300,
+}; Доповни об’єкт profile методами для роботи з його властивостями. Метод
+changeUsername(newName) повинен приймати рядок (нове ім’я) в параметр newName та
+змінювати значення властивості username на нове. Нічого не повертає. Метод
+updatePlayTime(hours) повинен приймати число (кількість годин) у параметр hours
+та збільшити на нього значення властивості playTime. Нічого не повертає. Метод
+getInfo() має повертати рядок формату <Username> has <amount> active hours!, де
+<Username> — це ім’я профілю, а <amount> — кількість ігрових годин. /_ The
+profile object describes a user's profile on the gaming platform. Its properties
+store the profile name username and the number of active hours playTime spent in
+the game._ /const profile = { username: 'Jacob', playTime: 300,} /_Add methods
+to the profile object to work with its properties. The changeUsername(newName)
+method should accept a string (new name) in the newName parameter and change the
+username property value to the new one. Returns nothing. The
+updatePlayTime(hours) method should accept a number (number of hours) in the
+hours parameter and increase the playTime property value by it. Returns nothing.
+The getInfo() method should return a string of the format <Username> has
+<amount> active hours!, where <Username> is the profile name, and <amount> is
+the number of play hours. Take the code below and insert it after the
+declaration of your function to check that it works correctly. The results of
+its work will be displayed in the console._/
 
-           https://www.freecodecamp.org/learn/full-stack-developer/
+https://www.freecodecamp.org/learn/full-stack-developer/

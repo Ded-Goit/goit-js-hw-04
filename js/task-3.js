@@ -1,25 +1,31 @@
 `use strict`;
-//Write a function filterArray(numbers, value) that takes
-// an array of numbers and a value as parameters.
+/**The profile object describes a user's profile on the gaming platform.
+ *  Its properties store the username and the number
+ * of active hours of playTime spent in the game. */
+const profile = {
+  username: 'Jacob',
+  playTime: 300,
+  /*The changeUsername(newName) method changes the username value 
+  to the passed newName.*/
+  changeUsername(newName) {
+    this.username = newName;
+  },
+  //The updatePlayTime(hours) method adds hours to playTime.
+  updatePlayTime(hours) {
+    this.playTime += hours;
+  },
+  /*The getInfo() method returns a string with the 
+  current username and playTime values.*/
+  getInfo() {
+    return `${this.username} has ${this.playTime} active hours!`;
+  },
+};
 
-function filterArray(numbers, value) {
-  // Create an empty array to hold the matching numbers
-  const filteredNumbers = [];
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
-  // If the number is greater than value, add it to the new array
-  for (const number of numbers) {
-    // If the number is greater than value, add it to the new array
-    if (number > value) {
-      filteredNumbers.push(number);
-    }
-  }
+profile.changeUsername('Marco');
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
 
-  // Return an array of matching numbers
-  return filteredNumbers;
-}
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
 //Leave this code for review by your mentor.

@@ -1,17 +1,49 @@
 `use strict`;
-// Write a function called makeArray that takes three parameters:
-// firstArray (array), secondArray (array), and maxLength (number)
-function makeArray(firstArray, secondArray, maxLength) {
-  const newArray = [...firstArray, ...secondArray];
-  // Combine two arrays into one
-  return newArray.length > maxLength ? newArray.slice(0, maxLength) : newArray;
-  // If the length of the new array is greater than maxLength,
-  //  return a copy of it with a limited length
+/**The function takes one parameter:
+ * days – an array of objects, where:
+ * The day key is the day of the week (not used in calculations).
+ * The calories key is the number of calories consumed that day.*/
+function calcAverageCalories(days) {
+  /*We declare a variable totalCalories, in which we will
+   accumulate the total number of calories. */
+  let totalCalories = 0;
+  //We check whether the days array is not empty (days.length != 0).
+  if (days.length != 0) {
+    /**for...of iterates over all day objects in the days array.
+     * On each iteration, we add day.calories to totalCalories.*/
+    for (let day of days) {
+      totalCalories += day.calories;
+    }
+    /**We return the calculated average value.
+     * Divide the total number of calories
+     * totalCalories by the number of days (days.length). */
+    return totalCalories / days.length;
+    //If the days array is empty, we immediately return 0.
+  } else return 0;
 }
-console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); // ["Mango", "Poly", "Ajax"]
-console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
-console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3)); // ["Mango", "Ajax", "Chelsea"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2)); // ["Earth", "Jupiter"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0)); // []
+console.log(
+  calcAverageCalories([
+    { day: 'monday', calories: 3010 },
+    { day: 'tuesday', calories: 3200 },
+    { day: 'wednesday', calories: 3120 },
+    { day: 'thursday', calories: 2900 },
+    { day: 'friday', calories: 3450 },
+    { day: 'saturday', calories: 3280 },
+    { day: 'sunday', calories: 3300 },
+  ])
+); // 3180
+
+console.log(
+  calcAverageCalories([
+    { day: 'monday', calories: 2040 },
+    { day: 'tuesday', calories: 2270 },
+    { day: 'wednesday', calories: 2420 },
+    { day: 'thursday', calories: 1900 },
+    { day: 'friday', calories: 2370 },
+    { day: 'saturday', calories: 2280 },
+    { day: 'sunday', calories: 2610 },
+  ])
+); // 2270
+
+console.log(calcAverageCalories([])); // 0
 // Leave this code for review by your mentor.
