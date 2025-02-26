@@ -1,4 +1,4 @@
-`use strict`;
+'use strict';
 /**The function takes one parameter:
  * days – an array of objects, where:
  * The day key is the day of the week (not used in calculations).

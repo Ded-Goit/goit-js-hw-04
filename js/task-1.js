@@ -1,4 +1,4 @@
-`use strict`;
+'use strict';
 /**The function declares two parameters:
  * products — an object in which the keys contain the names of the products,
  *  and their values ​​— the number of these products.

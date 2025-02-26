@@ -1,4 +1,4 @@
-`use strict`;
+'use strict';
 /**The profile object describes a user's profile on the gaming platform.
  *  Its properties store the username and the number
  * of active hours of playTime spent in the game. */
